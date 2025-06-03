@@ -1,0 +1,147 @@
+@import '../styles/media.scss';
+
+.gpt3__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+
+    &_menu {
+        margin-left: 1rem;
+        display: none;
+        position: relative;
+
+        svg {
+            cursor: pointer;
+        }
+
+        &_container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            text-align: end;
+            background: var(--color-footer);
+            padding: 2rem;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            margin-top: 1rem;
+            min-width: 210px;
+            border-radius: 5px;
+            box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+
+            &_links_sign {
+                display: none;
+
+                @include createMediaScreen(550) {
+                    display: block;
+                }
+            }
+
+            button {
+                @extend .button_style
+            }
+
+            p {
+                @extend .text_style;
+                margin: 1rem 0;
+            }
+
+            @include createMediaScreen(550) {
+                top: 20px;
+            }
+        }
+
+        @include createMediaScreen(1050) {
+            display: flex;
+        }
+    }
+
+    &_links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &_logo {
+            margin-right: 2rem;
+
+            img {
+                width: 62.56px;
+                height: 16.02px;
+            }
+        }
+
+        &_container {
+            display: flex;
+
+            p {
+                @extend .text_style
+            }
+
+            ;
+
+            @include createMediaScreen(1050) {
+                display: none;
+            }
+        }
+    }
+
+    &_sign {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+            @extend .text_style
+        }
+
+        button {
+            @extend .button_style
+        }
+
+        ;
+
+        @include createMediaScreen(550) {
+            display: none;
+        }
+    }
+
+    .text_style {
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: capitalize;
+        margin: 0 1rem;
+        cursor: pointer;
+    }
+
+    .button_style {
+        padding: .5rem 1rem;
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 500;
+        background: #FF4820;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 25px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+    }
+
+    @include createMediaScreen(550) {
+        padding: 2rem;
+    }
+
+    @include createMediaScreen(700) {
+        padding: 2rem 4rem;
+    }
+
+    @include createMediaScreen(1050) {
+        padding: 2rem;
+    }
+}

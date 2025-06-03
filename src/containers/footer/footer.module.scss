@@ -1,0 +1,148 @@
+@import '../../components/styles/media.scss';
+
+.gpt3__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-footer);
+
+    &_heading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-family: var(--font-family);
+            font-weight: 800;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            letter-spacing: -0.04em;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid white;
+        text-align: center;
+        margin-bottom: 10rem;
+        cursor: pointer;
+
+        p {
+            box-sizing: border-box;
+            font-family: var(--font-family);
+            word-spacing: 2px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+    }
+
+    &_links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: left;
+
+        div {
+            width: 250px;
+            margin: 1rem;
+        }
+
+        &_logo {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 118px;
+                height: 30px;
+
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-size: 12px;
+                line-height: 14px;
+                color: #FFFFFF;
+            }
+        }
+
+        &_div {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            h4 {
+                font-family: var(--font-family);
+                font-size: 14px;
+                line-height: 16px;
+                color: #FFFFFF;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-size: 12px;
+                line-height: 14px;
+                color: #FFFFFF;
+                margin: 0.5rem 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_copyright {
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+
+        p {
+            font-family: var(--font-family);
+            font-size: 12px;
+            line-height: 14px;
+            font-feature-settings: 'liga' off;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@include createMediaScreen(850) {
+    .gpt3__footer_header h1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@include createMediaScreen(650) {
+    .gpt3__footer {
+        &_header h1 {
+            font-size: 34px;
+            line-height: 42px;
+        }
+
+        &_links div{
+            margin: 1rem 0;
+        }
+    
+        &_btn p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@include createMediaScreen(550) {
+    .gpt3__footer {
+        &_header h1 {
+            font-size: 27px;
+            line-height: 38px;
+        }
+    }
+}
